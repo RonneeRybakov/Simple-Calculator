@@ -1,0 +1,130 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Calculator container */
+.calculator {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+}
+
+/* Display area */
+#display {
+  height: 80px;
+  background-color: #333;
+  color: #fff;
+  text-align: right;
+  padding: 15px;
+  font-size: 2em;
+  box-sizing: border-box;
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px; /* Space between buttons */
+}
+
+/* Buttons */
+.btn {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.5em;
+  padding: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: #e0e0e0;
+}
+
+.btn:active {
+  background-color: #d0d0d0;
+  transform: scale(0.98);
+}
+
+/* Special styling for operations */
+#btn-clear {
+  background-color: #ff4d4d;
+  color: #fff;
+  grid-column: span 2; /* Span across 2 columns */
+}
+
+#btn-clear:hover {
+  background-color: #f50909;
+}
+#btn-0 {
+  background-color: #f9f9f9;
+  grid-column: 1 / span 2; /* Span across 2 columns */
+  grid-row: 5; /* Place in the last row */
+}
+#btn-0:hover {
+  background-color: #e0e0e0;
+}
+
+#btn-decimal {
+  background-color: #f9f9f9;
+  grid-column: 3; /* Place in the 3rd column of the last row */
+  grid-row: 5; /* Place in the last row */
+}
+#btn-decimal:hover {
+  background-color: #e0e0e0;
+}
+
+#btn-equal {
+  background-color: #4caf50;
+  color: #fff;
+  grid-column: 4; /* Place in the 4th column */
+  grid-row: 5; /* Place in the last row */
+}
+
+#btn-equal:hover {
+  background-color: #388e3c;
+}
+
+#btn-add,
+#btn-subtract,
+#btn-multiply,
+#btn-divide {
+  background-color: #f9f9f9;
+}
+
+#btn-add:hover,
+#btn-subtract:hover,
+#btn-multiply:hover,
+#btn-divide:hover {
+  background-color: #e0e0e0;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 350px) {
+  .calculator {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #display {
+    font-size: 1.5em;
+  }
+
+  .btn {
+    font-size: 1.2em;
+    padding: 15px;
+  }
+}
